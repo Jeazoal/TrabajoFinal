@@ -67,13 +67,40 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Formulario web1.aspx" />
+    <Content Include="Formulario web2.aspx" />
+    <Content Include="Imagenes\logo.png" />
+    <Content Include="script.js" />
+    <Content Include="Style\sidebar.css" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Formulario web1.aspx.cs">
+      <DependentUpon>Formulario web1.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Formulario web1.aspx.designer.cs">
+      <DependentUpon>Formulario web1.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Formulario web2.aspx.cs">
+      <DependentUpon>Formulario web2.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Formulario web2.aspx.designer.cs">
+      <DependentUpon>Formulario web2.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Site1.Master.cs">
+      <DependentUpon>Site1.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Site1.Master.designer.cs">
+      <DependentUpon>Site1.Master</DependentUpon>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
+    <Content Include="Site1.Master" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
@@ -81,6 +108,7 @@
       <DependentUpon>Web.config</DependentUpon>
     </None>
   </ItemGroup>
+  <ItemGroup />
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
     <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
