@@ -67,43 +67,49 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Formulario web1.aspx" />
-    <Content Include="Formulario web2.aspx" />
+    <Content Include="FormularioWeb1.aspx" />
+    <Content Include="Imagenes\Fondo.png" />
+    <Content Include="Imagenes\Login.png" />
     <Content Include="Imagenes\logo.png" />
+    <Content Include="Imagenes\signup.png" />
+    <Content Include="PaginaInicio.aspx" />
+    <Content Include="Registro.aspx" />
     <Content Include="script.js" />
+    <Content Include="Scripts\script.js" />
+    <Content Include="Style\Login.css" />
+    <Content Include="Style\Registrar.css" />
     <Content Include="Style\sidebar.css" />
     <Content Include="Web.config" />
-    <Content Include="WebForm1.aspx" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Formulario web1.aspx.cs">
-      <DependentUpon>Formulario web1.aspx</DependentUpon>
+    <Compile Include="FormularioWeb1.aspx.cs">
+      <DependentUpon>FormularioWeb1.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="Formulario web1.aspx.designer.cs">
-      <DependentUpon>Formulario web1.aspx</DependentUpon>
+    <Compile Include="FormularioWeb1.aspx.designer.cs">
+      <DependentUpon>FormularioWeb1.aspx</DependentUpon>
     </Compile>
-    <Compile Include="Formulario web2.aspx.cs">
-      <DependentUpon>Formulario web2.aspx</DependentUpon>
+    <Compile Include="PaginaInicio.aspx.cs">
+      <DependentUpon>PaginaInicio.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="Formulario web2.aspx.designer.cs">
-      <DependentUpon>Formulario web2.aspx</DependentUpon>
+    <Compile Include="PaginaInicio.aspx.designer.cs">
+      <DependentUpon>PaginaInicio.aspx</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Registro.aspx.cs">
+      <DependentUpon>Registro.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Registro.aspx.designer.cs">
+      <DependentUpon>Registro.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Site1.Master.cs">
       <DependentUpon>Site1.Master</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="Site1.Master.designer.cs">
       <DependentUpon>Site1.Master</DependentUpon>
-    </Compile>
-    <Compile Include="WebForm1.aspx.cs">
-      <DependentUpon>WebForm1.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="WebForm1.aspx.designer.cs">
-      <DependentUpon>WebForm1.aspx</DependentUpon>
     </Compile>
   </ItemGroup>
   <ItemGroup>
@@ -116,7 +122,16 @@
       <DependentUpon>Web.config</DependentUpon>
     </None>
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <ProjectReference Include="..\CapaEntidades\CapaEntidades.csproj">
+      <Project>{6c089088-f419-4ceb-9213-be408c0eca54}</Project>
+      <Name>CapaEntidades</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\CapaNegocio\CapaNegocio.csproj">
+      <Project>{0b0c9330-69c3-467d-bd53-913a66355985}</Project>
+      <Name>CapaNegocio</Name>
+    </ProjectReference>
+  </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
     <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
