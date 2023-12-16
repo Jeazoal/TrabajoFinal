@@ -75,7 +75,6 @@
             <input  />
           </div>
         </div>
-
         <div class="input-box address">
           <label>Ubigeo</label>
           <div class="column">
