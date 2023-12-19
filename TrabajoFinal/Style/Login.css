@@ -10,7 +10,7 @@
 }
 
 body {
-    height: 100vh;
+    height: 80px;
     width: 100%;
     background: url("../Imagenes/Fondo.png") center/cover no-repeat;
 }

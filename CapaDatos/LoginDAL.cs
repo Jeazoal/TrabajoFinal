@@ -34,7 +34,6 @@ namespace CapaDatos
                     resultado = "Error: " + ex.Message;
                 }
             }
-
             return resultado;
         }
     }

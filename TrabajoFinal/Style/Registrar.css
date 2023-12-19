@@ -1,4 +1,4 @@
-﻿/* Import Google font - Poppins */
+﻿
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap");
 
 * {
@@ -116,7 +116,7 @@ body {
     font-size: 1rem;
 }
 
-.form button {
+#btnregistrar {
     height: 55px;
     width: 100%;
     color: #fff;

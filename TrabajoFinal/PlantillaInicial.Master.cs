@@ -7,14 +7,14 @@ using System.Web.UI.WebControls;
 
 namespace TrabajoFinal
 {
-    public partial class PaginaInicio : System.Web.UI.Page
+    public partial class PaginaInicial : System.Web.UI.MasterPage
     {
         protected void Page_Load(object sender, EventArgs e)
         {
 
         }
 
-        protected void Button1_Click(object sender, EventArgs e)
+        protected void btnLogin_Click(object sender, EventArgs e)
         {
             string numeroDocumento = txtdni.Text;
             string contrasena = txtcontraseña.Text;
