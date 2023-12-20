@@ -1,4 +1,6 @@
-﻿using System;
+﻿using CapaNegocio;
+using Entidades;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
@@ -16,25 +18,39 @@ namespace TrabajoFinal
 
         protected void btnLogin_Click(object sender, EventArgs e)
         {
-            string numeroDocumento = txtdni.Text;
-            string contrasena = txtcontraseña.Text;
-
-            CapaNegocio.LoginBL loginBL = new CapaNegocio.LoginBL();
-            string resultado = loginBL.ValidarCredenciales(numeroDocumento, contrasena);
-
-            // Verificar el resultado y redireccionar según sea necesario
-            if (resultado == "Login exitoso")
+            try
             {
-                // Redireccionar a la página FormularioWeb1.aspx
-                Session["UsuarioDNI"] = numeroDocumento;
+                // Obtén el número de documento y la contraseña ingresados por el usuario
+                string numeroDocumento = txtdni.Text;
+                string contrasena = txtcontraseña.Text;
 
-                Response.Redirect("FormularioWeb1.aspx");
+                // Crea una instancia del Business Logic (BL) para el login
+                LoginBL loginBL = new LoginBL();
+
+                // Realiza la autenticación del usuario
+                DatosPersonales usuarioAutenticado = loginBL.VerificarCredenciales(numeroDocumento, contrasena);
+
+                // Verifica si la autenticación fue exitosa
+                if (usuarioAutenticado != null)
+                {
+                    // Establece la variable de sesión indicando que el usuario ha iniciado sesión
+                    Session["UsuarioAutenticado"] = usuarioAutenticado;
+
+                    // Redirige a la página principal
+                    Response.Redirect("PaginaPrincipal.aspx");
+                }
+                else
+                {
+                    // Muestra un mensaje de error si la autenticación falla
+                    Response.Write("Autenticación fallida. Verifica tu número de documento y contraseña.");
+                }
             }
-            else
+            catch (Exception ex)
             {
-                // Manejar el caso en que las credenciales no son válidas (puedes mostrar un mensaje de error, por ejemplo)
-                Response.Write("<script>alert('Credenciales inválidas.')</script>");
+                // Manejar cualquier excepción que pueda ocurrir durante el proceso de login
+                Response.Write("Error: " + ex.Message);
             }
+
         }
     }
 }

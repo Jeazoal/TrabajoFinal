@@ -1,7 +1,9 @@
 ﻿using CapaDatos;
 using Entidades;
 using BCrypt.Net;
-
+using System.Security.Cryptography;
+using System.Text;
+using System;
 
 namespace CapaNegocio
 {
@@ -11,12 +13,17 @@ namespace CapaNegocio
 
         public void RegistrarDatosPersonales(DatosPersonales datosPersonales)
         {
-            string contrasenaSinCifrar = datosPersonales.Contrasena;
-            string contrasenaCifrada = BCrypt.Net.BCrypt.HashPassword(contrasenaSinCifrar);
-            datosPersonales.Contrasena = contrasenaCifrada;
-
-            // Aquí puedes realizar validaciones adicionales antes de llamar al DAL, si es necesario
-            registrarDAL.RegistrarDatosPersonales(datosPersonales);
+            try
+            {
+                // Llama al DAL para registrar datos personales
+                registrarDAL.RegistrarDatosPersonales(datosPersonales);
+            }
+            catch (Exception ex)
+            {
+                // Manejar cualquier excepción que pueda ocurrir durante el proceso de registro
+                Console.WriteLine("Error al registrar datos personales: " + ex.Message);
+            }
         }
+
     }
 }

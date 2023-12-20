@@ -1,5 +1,4 @@
-﻿/* Import Google font - Poppins */
-@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap");
+﻿@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap");
 
 * {
     margin: 0;
@@ -13,7 +12,7 @@ a {
 }
 
 .header {
-    background-color:black;
+    background-color: black;
     position: fixed;
     height: 80px;
     width: 100%;
@@ -70,7 +69,7 @@ a {
     position: relative;
     height: 80px;
     width: 100%;
-    background-color:aliceblue;
+    background-color: aliceblue;
     background-size: cover;
     background-position: center;
 }
@@ -197,7 +196,7 @@ a {
 }
 
 .form_container a {
-    color: #6C6969;
+    color: #4e4c4c;
     font-size: 12px;
 }
 
@@ -239,7 +238,7 @@ a {
 
 footer {
     position: fixed;
-    background: #140B5C;
+    background: #343434;
     width: 100%;
     bottom: 0;
     left: 0;
@@ -422,7 +421,7 @@ footer .content .link-boxes {
 
 footer .bottom-details {
     width: 100%;
-    background: #0F0844;
+    background: #343434;
 }
 
     footer .bottom-details .bottom_text {

@@ -84,7 +84,7 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Home.aspx" />
-    <Content Include="FormularioWeb1.aspx" />
+    <Content Include="PaginaPrincipal.aspx" />
     <Content Include="Imagenes\Fondo.png" />
     <Content Include="Imagenes\Login.png" />
     <Content Include="Imagenes\logo.png" />
@@ -96,7 +96,7 @@
     <Content Include="Scripts\script.js" />
     <Content Include="Style\Home.css" />
     <Content Include="Style\Login.css" />
-    <Content Include="Style\PaginaInicial.css" />
+    <Content Include="Style\PaginaInicio.css" />
     <Content Include="Style\Registrar.css" />
     <Content Include="Style\sidebar.css" />
     <Content Include="Web.config" />
@@ -109,12 +109,12 @@
     <Compile Include="Home.aspx.designer.cs">
       <DependentUpon>Home.aspx</DependentUpon>
     </Compile>
-    <Compile Include="FormularioWeb1.aspx.cs">
-      <DependentUpon>FormularioWeb1.aspx</DependentUpon>
+    <Compile Include="PaginaPrincipal.aspx.cs">
+      <DependentUpon>PaginaPrincipal.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="FormularioWeb1.aspx.designer.cs">
-      <DependentUpon>FormularioWeb1.aspx</DependentUpon>
+    <Compile Include="PaginaPrincipal.aspx.designer.cs">
+      <DependentUpon>PaginaPrincipal.aspx</DependentUpon>
     </Compile>
     <Compile Include="PlantillaInicial.Master.cs">
       <DependentUpon>PlantillaInicial.Master</DependentUpon>

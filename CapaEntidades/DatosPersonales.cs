@@ -9,6 +9,9 @@ namespace Entidades
 {
     public class DatosPersonales
     {
+
+        public DatosPersonales() { }    
+
         public int Id { get; set; }
         public int TipoDocumentoId { get; set; }
         public string NumeroDocumento { get; set; }

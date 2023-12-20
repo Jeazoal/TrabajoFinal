@@ -10,11 +10,21 @@ namespace CapaNegocio
 {
     public class LoginBL
     {
-        LoginDAL loginDAL = new LoginDAL();
+        private readonly LoginDAL loginDAL = new LoginDAL();
 
-        public string ValidarCredenciales(string numeroDocumento, string contrasena)
+        public DatosPersonales VerificarCredenciales(string numeroDocumento, string contrasena)
         {
-            return loginDAL.ValidarCredenciales(numeroDocumento, contrasena);
+            try
+            {
+                // Llama al DAL para verificar las credenciales
+                return loginDAL.VerificarCredenciales(numeroDocumento, contrasena);
+            }
+            catch (Exception ex)
+            {
+                // Manejar cualquier excepción que pueda ocurrir durante el proceso de verificación
+                Console.WriteLine("Error al verificar credenciales: " + ex.Message);
+                return null;
+            }
         }
     }
 }

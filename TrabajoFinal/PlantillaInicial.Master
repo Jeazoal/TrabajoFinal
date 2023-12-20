@@ -5,7 +5,7 @@
 <html>
 <head runat="server">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css"/>
-    <link rel="stylesheet" href="Style/PaginaInicial.css" />
+    <link rel="stylesheet" href="Style/PaginaInicio.css" />
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
     <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/line.css" />
     <title></title>
@@ -60,9 +60,8 @@
      <footer>
     <div class="content">
       <div class="top">
-        <div class="logo-details">
-          <i class="fab fa-slack"></i>
-          <span class="logo_name">CodingLab</span>
+        <div class="logo-details">  
+          <span class="logo_name">EducaNet</span>
         </div>
         <div class="media-icons">
           <a href="#"><i class="fab fa-facebook-f"></i></a>
@@ -74,7 +73,8 @@
       </div>
       <div class="link-boxes">
         <ul class="box">
-          <li class="link_name">Centro Preuniversitario</li>
+          <li class="link_name">Centros</li>
+            <li><a href="#">Centro Preuniversitario</a></li>
           <li><a href="#">Centro de Idiomas</a></li>
           <li><a href="#">Centro Emprendimiento</a></li>
           <li><a href="#">Centro Investigacion</a></li>
@@ -83,8 +83,8 @@
           <li class="link_name"></li>
           <li><a href="#">Noticias</a></li>
           <li><a href="#">Blog Ideas</a></li>
-          <li><a href="#">Logo design</a></li>
-          <li><a href="#">Banner design</a></li>
+          <li><a href="#">Internacional</a></li>
+          <li><a href="#">Publicaciones</a></li>
         </ul>
         <ul class="box">
           <li class="link_name">Account</li>
@@ -100,11 +100,7 @@
           <li><a href="#">Photography</a></li>
           <li><a href="#">Photoshop</a></li>
         </ul>
-        <ul class="box input-box">
-          <li class="link_name">Subscribe</li>
-          <li><input type="text" placeholder="Enter your email"></li>
-          <li><input type="button" value="Subscribe"></li>
-        </ul>
+       
       </div>
     </div>
     <div class="bottom-details">

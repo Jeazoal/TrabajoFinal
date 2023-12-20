@@ -12,15 +12,13 @@ namespace CapaDatos
 
     public class RegistrarDAL
     {
-
-
         public void RegistrarDatosPersonales(DatosPersonales datosPersonales)
         {
             using (SqlConnection cn = new ConexionBD().conectar())
             {
                 try
                 {
-                    using (SqlCommand cmd = new SqlCommand("RegistrarDatosPersonales", cn))
+                    using (SqlCommand cmd = new SqlCommand("RegistrarDatos", cn))
                     {
                         cmd.CommandType = CommandType.StoredProcedure;
 
@@ -39,7 +37,7 @@ namespace CapaDatos
                         cmd.Parameters.AddWithValue("@Telefono", datosPersonales.Telefono);
                         cmd.Parameters.AddWithValue("@Celular", datosPersonales.Celular);
                         cmd.Parameters.AddWithValue("@CorreoElectronico", datosPersonales.CorreoElectronico);
-                        cmd.Parameters.AddWithValue("@Contrasena", datosPersonales.Contrasena);
+                        cmd.Parameters.AddWithValue("@Contrasena", datosPersonales.Contrasena);  // La contraseña ya está hasheada
                         cmd.Parameters.AddWithValue("@Foto", datosPersonales.Foto);
 
                         cn.Open();
@@ -53,5 +51,6 @@ namespace CapaDatos
                 }
             }
         }
+
     }
 }
