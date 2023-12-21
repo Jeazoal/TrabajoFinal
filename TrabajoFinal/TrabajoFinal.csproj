@@ -84,6 +84,11 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Home.aspx" />
+    <Content Include="Imagenes\HomeEcuesta.png" />
+    <Content Include="Imagenes\HomePromocion.png" />
+    <Content Include="Imagenes\HomeBaseDatos.png" />
+    <Content Include="Imagenes\HomeMantenimiento.png" />
+    <Content Include="Imagenes\HomeProgramador.png" />
     <Content Include="PaginaPrincipal.aspx" />
     <Content Include="Imagenes\Fondo.png" />
     <Content Include="Imagenes\Login.png" />

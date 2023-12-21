@@ -1,38 +1,183 @@
-﻿.carousel {
-    width: 100%;
-    overflow: hidden;
-    position: relative;
+﻿@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500;600;700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Open Sans', sans-serif;
 }
 
-    .carousel .slide {
+body {
+    background: #ecececdb;
+}
+
+.sub-title {
+    margin-top:50px;
+    margin-left: 50px;
+    font-size:30px;
+    color:#212222
+}
+
+.content-links {
+    margin: 30px;
+    margin-left:100px;
+    margin-right:100px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    text-align: center;
+    height: 130px;
+    color: #fff;
+    font-size: 20px;
+    font-weight: bold;
+    text-decoration:none;
+}
+    .content-links div {
+        height: 100%;
+        padding: 15px;
+        text-align: center;
         display: flex;
         align-items: center;
-        justify-content: center;
-        position: absolute;
+        border-radius: 6px;
+    }
+
+    .content-links a {
+        text-decoration: none;
+        color: #fff;
+    }
+
+    .content-1 {
+        background-color: #c46a08;
+    }
+
+    .content-2 {
+        background-color: #083ac4;
+    }
+
+.content-3 {
+    background-color: #B22485;
+}
+
+.content-4 {
+    background-color: #c41f08;
+}
+
+.div-encuesta {
+    margin-top:30px;
+    height: 500px;
+    width: 100%;
+   
+}
+
+    .div-encuesta img {
         width: 100%;
-        height: 300px;
-        opacity: 0;
-        transition: opacity 0.5s;
+        height: 100%;
+        object-fit: fill;
     }
 
-        .carousel .slide img {
-            max-width: 100%;
-            max-height: 100%;
-        }
-
-        .carousel .slide:target {
-            opacity: 1;
-        }
-
-    .carousel .nav {
-        position: absolute;
-        bottom: 20px;
-        left: 50%;
-        transform: translateX(-50%);
+    .div-encuesta a {
+        border-radius: 6px;
+        font-size: 35px;
+        padding: 6px 24px; 
+        color: #fff;
+        border: 2px solid #ffffff;
+        position: relative;
+        left: 70%;
+        bottom: 35%;
     }
 
-        .carousel .nav a {
-            text-decoration: none;
-            color: #000;
-            margin: 0 10px;
+
+.card-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    max-width: 1250px;
+    margin: 10px auto;
+    padding: 5px;
+    gap: 20px;
+}
+
+    .card-list .card-item {
+        background: #fff;
+        padding: 26px;
+        border-radius: 8px;
+        box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.04);
+        list-style: none;
+        cursor: pointer;
+        text-decoration: none;
+        border: 2px solid transparent;
+        transition: border 0.5s ease;
+    }
+
+        .card-list .card-item:hover {
+            border: 2px solid #000;
         }
+
+        .card-list .card-item img {
+            width: 100%;
+            aspect-ratio: 16/9;
+            border-radius: 8px;
+            object-fit: cover;
+        }
+
+    .card-list span {
+        display: inline-block;
+        background: #F7DFF5;
+        margin-top: 32px;
+        padding: 8px 15px;
+        font-size: 0.75rem;
+        border-radius: 50px;
+        font-weight: 600;
+    }
+
+    .card-list .developer {
+        background-color: #F7DFF5;
+        color: #B22485;
+    }
+
+    .card-list .designer {
+        background-color: #d1e8ff;
+        color: #2968a8;
+    }
+
+    .card-list .editor {
+        background-color: #d6f8d6;
+        color: #205c20;
+    }
+
+.card-item h3 {
+    color: #000;
+    font-size: 1rem;
+    margin-top: 28px;
+    font-weight: 600;
+}
+
+.card-item .arrow {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transform: rotate(-35deg);
+    height: 40px;
+    width: 40px;
+    color: #000;
+    border: 1px solid #000;
+    border-radius: 50%;
+    margin-top: 40px;
+    transition: 0.2s ease;
+}
+
+.card-list .card-item:hover .arrow {
+    background: #000;
+    color: #fff;
+}
+
+@media (max-width: 1200px) {
+    .card-list .card-item {
+        padding: 15px;
+    }
+}
+
+@media screen and (max-width: 980px) {
+    .card-list {
+        margin: 0 auto;
+    }
+}

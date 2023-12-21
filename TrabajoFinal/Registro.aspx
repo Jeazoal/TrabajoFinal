@@ -37,7 +37,7 @@
   </div>
               <div class="input-box">
   <label>Codigo Ubigeo:</label>
-    <asp:TextBox ID="txtubigeo" runat="server" type="text" placeholder="Codigo Ubigeo..." required></asp:TextBox>
+    <asp:TextBox ID="txtubigeo" runat="server" type="text" placeholder="Codigo Ubigeo..." required Enabled="False"></asp:TextBox>
 </div>
 </div>
         <div class="input-box">

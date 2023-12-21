@@ -12,7 +12,7 @@ a {
 }
 
 .header {
-    background-color: black;
+    background-color: #343434;
     position: fixed;
     height: 80px;
     width: 100%;
@@ -237,22 +237,11 @@ a {
 
 
 footer {
-    position: fixed;
     background: #343434;
     width: 100%;
     bottom: 0;
     left: 0;
-}
-
-    footer::before {
-        content: '';
-        position: absolute;
-        left: 0;
-        top: 100px;
-        height: 1px;
-        width: 100%;
-        background: #AFAFB6;
-    }
+} 
 
     footer .content {
         max-width: 1250px;

@@ -146,7 +146,7 @@ namespace TrabajoFinal
                 string sexo = rbtmasculino.Checked ? "M" : (rbtfemenino.Checked ? "F" : string.Empty); // Asignar "M" si masculino, "F" si femenino
                 int estadoCivilId = Convert.ToInt32(dplEstadoCivil.SelectedValue);
                 string direccion = txtdireccion.Text;
-                string ubigeo = $"{dplDepartamento.SelectedValue}{dplprovincia.SelectedValue}{dpldistrito.SelectedValue}";
+                string ubigeo = txtubigeo.Text;
                 string discapacidad = rbtsi.Checked ? "Si" : (rbtno.Checked ? "No" : string.Empty); // Asignar "Si" si tiene discapacidad, "No" si no tiene
                 string descripcionDiscapacidad = txtdiscpacidad.Text;
                 string telefono = txttelefono.Text;

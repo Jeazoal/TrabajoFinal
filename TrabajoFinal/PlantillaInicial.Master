@@ -57,6 +57,10 @@
         </div>
       </div>
     </section>
+    <section class="sectioncontent">
+        <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+        </asp:ContentPlaceHolder>
+    </section>
      <footer>
     <div class="content">
       <div class="top">
@@ -80,25 +84,25 @@
           <li><a href="#">Centro Investigacion</a></li>
         </ul>
         <ul class="box">
-          <li class="link_name"></li>
+          <li class="link_name">Accesos Directos</li>
           <li><a href="#">Noticias</a></li>
           <li><a href="#">Blog Ideas</a></li>
           <li><a href="#">Internacional</a></li>
           <li><a href="#">Publicaciones</a></li>
         </ul>
         <ul class="box">
-          <li class="link_name">Account</li>
-          <li><a href="#">Profile</a></li>
-          <li><a href="#">My account</a></li>
-          <li><a href="#">Prefrences</a></li>
-          <li><a href="#">Purchase</a></li>
+          <li class="link_name">Informacion Institucional</li>
+          <li><a href="#">Transparencia</a></li>
+          <li><a href="#">Repositorio Institucional</a></li>
+          <li><a href="#">Proveedores</a></li>
+          <li><a href="#">Politica de privacidad</a></li>
         </ul>
         <ul class="box">
-          <li class="link_name">Courses</li>
-          <li><a href="#">HTML & CSS</a></li>
-          <li><a href="#">JavaScript</a></li>
-          <li><a href="#">Photography</a></li>
-          <li><a href="#">Photoshop</a></li>
+          <li class="link_name">Más Informacion</li>
+          <li><a href="#">Blog</a></li>
+          <li><a href="#">Eventos </a></li>
+          <li><a href="#">Noticia</a></li>
+          <li><a href="#">Publicaciones</a></li>
         </ul>
        
       </div>
@@ -115,9 +119,6 @@
   </footer>
 
     <script src="Scripts/PaginaInicial.js"></script>
-        <div>
-            <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
-            </asp:ContentPlaceHolder>
-        </div>
+        
 </body>
 </html>
