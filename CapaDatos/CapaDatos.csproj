@@ -57,14 +57,16 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="CambiarContrasenaDAL.cs" />
     <Compile Include="ConexionDB.cs" />
+    <Compile Include="CorreoSoporteDAL.cs" />
     <Compile Include="DepartamentoDAL.cs" />
     <Compile Include="DistritoDAL.cs" />
     <Compile Include="EstadoCDAL.cs" />
-    <Compile Include="HashHelper.cs" />
     <Compile Include="LoginDAL.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="ProvinciaDAL.cs" />
+    <Compile Include="RecuperarPasswordDAL.cs" />
     <Compile Include="RegistarDAL.cs" />
     <Compile Include="TipoDocumentoDAL.cs" />
   </ItemGroup>

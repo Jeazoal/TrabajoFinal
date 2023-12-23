@@ -37,7 +37,8 @@ namespace TrabajoFinal
                     Session["UsuarioAutenticado"] = usuarioAutenticado;
 
                     // Redirige a la página principal
-                    Response.Redirect("PaginaPrincipal.aspx");
+                    Response.Redirect("PaginaPrincipal.aspx", false); // Cambio aquí
+                    Context.ApplicationInstance.CompleteRequest(); // Cambio aquí
                 }
                 else
                 {
@@ -50,7 +51,6 @@ namespace TrabajoFinal
                 // Manejar cualquier excepción que pueda ocurrir durante el proceso de login
                 Response.Write("Error: " + ex.Message);
             }
-
         }
     }
 }

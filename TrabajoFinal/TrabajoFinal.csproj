@@ -83,6 +83,8 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Imagenes\logo.png" />
+    <Content Include="RecuperarContrasena.aspx" />
     <Content Include="Home.aspx" />
     <Content Include="Imagenes\HomeEcuesta.png" />
     <Content Include="Imagenes\HomePromocion.png" />
@@ -92,27 +94,45 @@
     <Content Include="PaginaPrincipal.aspx" />
     <Content Include="Imagenes\Fondo.png" />
     <Content Include="Imagenes\Login.png" />
-    <Content Include="Imagenes\logo.png" />
     <Content Include="Imagenes\signup.png" />
-    <Content Include="Registro.aspx" />
+    <Content Include="CambiarContrasena.aspx" />
+    <Content Include="RegistrarDatos.aspx" />
     <Content Include="script.js" />
     <Content Include="Scripts\Home.js" />
     <Content Include="Scripts\PaginaInicial.js" />
+    <Content Include="Scripts\Registrar.js" />
     <Content Include="Scripts\script.js" />
     <Content Include="Style\Home.css" />
-    <Content Include="Style\Login.css" />
-    <Content Include="Style\PaginaInicio.css" />
-    <Content Include="Style\Registrar.css" />
+    <Content Include="Style\Pinicial.css" />
+    <Content Include="Style\RecuperarC.css" />
+    <Content Include="Style\RecuperarForm.css" />
     <Content Include="Style\sidebar.css" />
+    <Content Include="Style\PEmergentes.css" />
+    <Content Include="Style\PaginaRegistrar.css" />
     <Content Include="Web.config" />
+    <Content Include="WebForm1.aspx" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="RecuperarContrasena.aspx.cs">
+      <DependentUpon>RecuperarContrasena.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="RecuperarContrasena.aspx.designer.cs">
+      <DependentUpon>RecuperarContrasena.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Home.aspx.cs">
       <DependentUpon>Home.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="Home.aspx.designer.cs">
       <DependentUpon>Home.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="PlantillaPaginasEmergentes.Master.cs">
+      <DependentUpon>PlantillaPaginasEmergentes.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="PlantillaPaginasEmergentes.Master.designer.cs">
+      <DependentUpon>PlantillaPaginasEmergentes.Master</DependentUpon>
     </Compile>
     <Compile Include="PaginaPrincipal.aspx.cs">
       <DependentUpon>PaginaPrincipal.aspx</DependentUpon>
@@ -129,12 +149,19 @@
       <DependentUpon>PlantillaInicial.Master</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Registro.aspx.cs">
-      <DependentUpon>Registro.aspx</DependentUpon>
+    <Compile Include="CambiarContrasena.aspx.cs">
+      <DependentUpon>CambiarContrasena.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="Registro.aspx.designer.cs">
-      <DependentUpon>Registro.aspx</DependentUpon>
+    <Compile Include="CambiarContrasena.aspx.designer.cs">
+      <DependentUpon>CambiarContrasena.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="RegistrarDatos.aspx.cs">
+      <DependentUpon>RegistrarDatos.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="RegistrarDatos.aspx.designer.cs">
+      <DependentUpon>RegistrarDatos.aspx</DependentUpon>
     </Compile>
     <Compile Include="Site1.Master.cs">
       <DependentUpon>Site1.Master</DependentUpon>
@@ -143,11 +170,19 @@
     <Compile Include="Site1.Master.designer.cs">
       <DependentUpon>Site1.Master</DependentUpon>
     </Compile>
+    <Compile Include="WebForm1.aspx.cs">
+      <DependentUpon>WebForm1.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="WebForm1.aspx.designer.cs">
+      <DependentUpon>WebForm1.aspx</DependentUpon>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
     <Content Include="Site1.Master" />
     <Content Include="PlantillaInicial.Master" />
+    <Content Include="PlantillaPaginasEmergentes.Master" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>

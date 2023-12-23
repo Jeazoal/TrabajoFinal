@@ -24,7 +24,6 @@ namespace CapaDatos
                     using (SqlCommand cmd = new SqlCommand("VerificarCredenciales", cn))
                     {
                         cmd.CommandType = CommandType.StoredProcedure;
-
                         cmd.Parameters.AddWithValue("@NumeroDocumento", numeroDocumento);
                         cmd.Parameters.AddWithValue("@Contrasena", contrasena);
 

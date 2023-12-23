@@ -1,22 +1,22 @@
-﻿using System;
+﻿using CapaDatos;
+using CapaEntidades;
+using CapaNegocio;
+using Entidades;
+using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Net.NetworkInformation;
 using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
-using CapaNegocio;
-using CapaDatos;
-using CapaEntidades;
-using Entidades;
 
 namespace TrabajoFinal
 {
-    public partial class Registro : System.Web.UI.Page
+    public partial class RegistrarDatos : System.Web.UI.Page
     {
-       
         protected void Page_Load(object sender, EventArgs e)
         {
-            if (!IsPostBack)
+             if (!IsPostBack)
             {
                 if (!IsPostBack)
                 {
@@ -26,7 +26,6 @@ namespace TrabajoFinal
                 }
 
             }
-    
         }
 
         private void CargarDepartamentos()
@@ -38,7 +37,7 @@ namespace TrabajoFinal
                 dplDepartamento.DataSource = departamentos;
                 dplDepartamento.DataTextField = "Nombre";
                 dplDepartamento.DataValueField = "Id";
-                dplDepartamento.DataBind();           
+                dplDepartamento.DataBind();
                 dplDepartamento.Items.Insert(0, new System.Web.UI.WebControls.ListItem("Seleccionar Departamento", "0"));
             }
             catch (Exception ex)
@@ -121,19 +120,17 @@ namespace TrabajoFinal
         {
             string idDistrito = dpldistrito.SelectedValue;
 
-            // Mostrar el ID en el TextBox
-            txtubigeo.Text = idDistrito;
+
         }
 
         protected void dplprovincia_SelectedIndexChanged(object sender, EventArgs e)
         {
             string idProvincia = dplprovincia.SelectedValue;
             CargarDistritos(idProvincia);
-            txtubigeo.Text = string.Empty;
-
         }
 
-        protected void Button1_Click(object sender, EventArgs e)
+
+        protected void btnregistrar_Click(object sender, EventArgs e)
         {
             try
             {
@@ -146,7 +143,7 @@ namespace TrabajoFinal
                 string sexo = rbtmasculino.Checked ? "M" : (rbtfemenino.Checked ? "F" : string.Empty); // Asignar "M" si masculino, "F" si femenino
                 int estadoCivilId = Convert.ToInt32(dplEstadoCivil.SelectedValue);
                 string direccion = txtdireccion.Text;
-                string ubigeo = txtubigeo.Text;
+                string ubigeo = dpldistrito.SelectedValue;
                 string discapacidad = rbtsi.Checked ? "Si" : (rbtno.Checked ? "No" : string.Empty); // Asignar "Si" si tiene discapacidad, "No" si no tiene
                 string descripcionDiscapacidad = txtdiscpacidad.Text;
                 string telefono = txttelefono.Text;
@@ -196,13 +193,15 @@ namespace TrabajoFinal
                 registrarBL.RegistrarDatosPersonales(datosPersonales);
 
                 // Aquí puedes agregar lógica adicional, como redireccionar a otra página o mostrar un mensaje de éxito
-                Response.Write("Registro exitoso!");
+                Response.Redirect("Home.aspx");
             }
             catch (Exception ex)
             {
                 // Manejar cualquier excepción que pueda ocurrir durante el proceso de registro
                 Response.Write("Error: " + ex.Message);
+                ScriptManager.RegisterStartupScript(this, this.GetType(), "showAlert", $"alert('Error durante el registro: {ex.Message}');", true);
+
             }
-        }
+        }    
     }
 }

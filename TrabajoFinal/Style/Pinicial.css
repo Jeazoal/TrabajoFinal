@@ -34,6 +34,18 @@ a {
     justify-content: space-between;
 }
 
+.nav_item{
+    flex-grow:1;
+}
+
+.logo-title {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: row;
+    width: 100px;
+}
+
 .nav_logo,
 .nav_link,
 .button {
@@ -41,7 +53,7 @@ a {
 }
 
 .nav_logo {
-    font-size: 25px;
+    font-size: 35px;
 }
 
 .nav_item {
@@ -241,7 +253,7 @@ footer {
     width: 100%;
     bottom: 0;
     left: 0;
-} 
+}
 
     footer .content {
         max-width: 1250px;
