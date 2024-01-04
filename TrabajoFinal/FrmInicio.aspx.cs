@@ -7,7 +7,7 @@ using System.Web.UI.WebControls;
 
 namespace TrabajoFinal
 {
-    public partial class Formulario_web1 : System.Web.UI.Page
+    public partial class Formulario_web14 : System.Web.UI.Page
     {
         protected void Page_Load(object sender, EventArgs e)
         {
@@ -23,5 +23,6 @@ namespace TrabajoFinal
             // Verifica si existe una variable de sesión que indique que el usuario ha iniciado sesión
             return Session["UsuarioAutenticado"] != null;
         }
+
     }
 }

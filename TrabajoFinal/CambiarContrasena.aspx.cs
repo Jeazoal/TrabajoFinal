@@ -8,30 +8,11 @@ using System.Web.UI.WebControls;
 
 namespace TrabajoFinal
 {
-    public partial class RecuperarContraseña : System.Web.UI.Page
+    public partial class Formulario_web13 : System.Web.UI.Page
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-            string usuario = Request.QueryString["usuario"];
 
-            // Puedes utilizar el usuario para realizar operaciones en la base de datos o mostrar información en la página
-            // Por ejemplo, puedes prellenar un campo oculto con el usuario para usarlo en el proceso de cambio de contraseña.
-            if (!UsuarioRecuperarContrasena())
-            {
-                // Si no ha iniciado sesión, redirige a la página de inicio de sesión
-                Response.Redirect("RecuperarContrasena.aspx");
-            }
-
-        }
-        private bool UsuarioRecuperarContrasena()
-        {
-            // Verifica si existe una variable de sesión que indique que el usuario ha iniciado sesión
-            return Session["RecuperarContrasena"] != null;
-        }
-
-        protected void Button1_Click(object sender, EventArgs e)
-        {
-           
         }
 
         protected void btnCambiarContrasena_Click(object sender, EventArgs e)

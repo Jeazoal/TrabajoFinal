@@ -28,11 +28,9 @@
         <button class="button" id="form-open">Login</button>
       </nav>
     </header>
-    <!-- Home -->
     <section class="home">
       <div class="form_container">
         <i class="uil uil-times form_close"></i>
-        <!-- Login From -->
         <div class="form login_form">
           <form id="form1" runat="server">
             <h2>Login</h2>
@@ -63,7 +61,7 @@
         </asp:ContentPlaceHolder>
     </section>
      <footer>
-    <div class="content">
+    <div>
       <div class="top">
         <div class="logo-details">  
           <span class="logo_name">EducaNet</span>

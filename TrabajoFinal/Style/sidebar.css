@@ -285,6 +285,13 @@ body {
     display: none;
 }
 
+.form-section {
+    background-color:gray;
+    margin-left: 285px;
+    margin-top: 95px;
+    height: 290px;
+}
+
 @media screen and (max-width: 768px) {
     #sidebarOpen {
         font-size: 25px;

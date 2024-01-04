@@ -71,14 +71,25 @@ namespace CapaDatos
 
                         var mailServices = new CorreoSoporteDAL();
 
-                        string formularioLink = "<a href='https://localhost:44380/CambiarContrasena.aspx'>Ingrese aquí</a>";
+                        string formularioLink = "https://localhost:44380/CambiarContrasena.aspx'";
 
                         mailServices.sendMail(
                             subject: "Sistema EducaNet: Solicitud de recuperacion de contraseña",
-                            body: $"<html><body><p>Hola {Nombre},</p>" +
-                                  $"<p>Usted solicitó recuperar su contraseña.</p>" +
-                                  $"<p>Sin embargo, le pedimos que cambie su contraseña inmediatamente una vez {formularioLink} ingrese al sistema.</p></body></html>",
-                            destinatariocorreo: new List<string> { correoUsuario }
+         body: $"<html><head><style>" +
+          $"body {{ font-family: 'Arial, sans-serif'; margin: 0; padding: 0; }}" +
+          $".container {{ max-width: 600px; margin: 0 auto; padding: 20px; border-radius: 10px; background-color: #F5F5F5; box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); }}" +
+          $".header {{ background-color: #007BFF; color: #fff; text-align: center; padding: 10px; border-radius: 10px 10px 0 0; }}" +
+          $"p {{ color: #333; }}" +
+          $"a {{ color: #007BFF; text-decoration: none; }}" +
+          $"</style></head><body>" +
+          $"<div class='container'>" +
+          $"<div class='header'>" +
+          $"<h2>Hola {Nombre}</h2>" +
+          $"</div>" +
+          $"<p>Usted solicitó recuperar su contraseña.</p>" +
+          $"<p>Le pedimos que cambie su contraseña inmediatamente una vez <a href='{formularioLink}'>ingrese al sistema</a>.</p>" +
+          $"</div></body></html>",
+                    destinatariocorreo: new List<string> { correoUsuario }
                         );
                         return "Hola " + Nombre + "\n Usted solicitud recuperar su contraseña.\n" +
                             "Porfavor revise su correo: " + correoUsuario +

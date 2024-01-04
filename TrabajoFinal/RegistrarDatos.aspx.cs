@@ -58,7 +58,6 @@ namespace TrabajoFinal
                 dplprovincia.DataValueField = "Id";
                 dplprovincia.DataBind();
 
-                // Insertar el elemento "Seleccionar Provincia" al inicio
                 dplprovincia.Items.Insert(0, new System.Web.UI.WebControls.ListItem("Seleccionar Provincia", "0"));
             }
             catch (Exception ex)
@@ -134,7 +133,6 @@ namespace TrabajoFinal
         {
             try
             {
-                // Obtener los valores de los controles en tu formulario
                 int tipoDocumentoId = Convert.ToInt32(dpltipodocumento.SelectedValue);
                 string numeroDocumento = txtnumeroDocumento.Text;
                 string apellidoPaterno = txtapepaterno.Text;
@@ -151,7 +149,6 @@ namespace TrabajoFinal
                 string correoElectronico = txtgmail.Text;
                 string contrasena = txtcontrasena.Text;
 
-                // Crear una instancia de la entidad DatosPersonales y asignar los valores
                 DatosPersonales datosPersonales = new DatosPersonales
                 {
                     TipoDocumentoId = tipoDocumentoId,
@@ -169,10 +166,8 @@ namespace TrabajoFinal
                     Celular = celular,
                     CorreoElectronico = correoElectronico,
                     Contrasena = contrasena,
-                    // Puedes agregar otros campos y asignar sus valores aquí
                 };
 
-                // Obtener la foto y convertirla a bytes
                 byte[] fotoBytes = null;
                 if (fileInput.HasFile)
                 {
@@ -185,19 +180,15 @@ namespace TrabajoFinal
                     }
                 }
 
-                // Asignar la foto a la entidad DatosPersonales
                 datosPersonales.Foto = fotoBytes;
 
-                // Llamar a la capa de negocio para realizar el registro
                 RegistrarBL registrarBL = new RegistrarBL();
                 registrarBL.RegistrarDatosPersonales(datosPersonales);
 
-                // Aquí puedes agregar lógica adicional, como redireccionar a otra página o mostrar un mensaje de éxito
                 Response.Redirect("Home.aspx");
             }
             catch (Exception ex)
             {
-                // Manejar cualquier excepción que pueda ocurrir durante el proceso de registro
                 Response.Write("Error: " + ex.Message);
                 ScriptManager.RegisterStartupScript(this, this.GetType(), "showAlert", $"alert('Error durante el registro: {ex.Message}');", true);
 

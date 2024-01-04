@@ -12,7 +12,8 @@
              <asp:Button ID="btnIngresar" runat="server" style="margin-bottom: 0px" Text="Continuar" OnClick="btnIngresar_Click" />
        </form> 
        <br />
-        <asp:Label ID="Label1" runat="server"></asp:Label>
+       <br />
+        <asp:Label ID="labelresult" runat="server" ForeColor="#33CC33"></asp:Label>
        
        <div class="footer">
             <a href="#">Ayuda</a>

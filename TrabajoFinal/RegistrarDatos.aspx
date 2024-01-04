@@ -5,8 +5,6 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">
       <link rel="stylesheet" href="Style/PaginaRegistrar.css">
-     
-    <!----===== Iconscout CSS ===== -->
     <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/line.css">
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
     <title></title>
@@ -87,7 +85,7 @@
 
                             <div class="input-field">
                                     <label>Distrito</label>
-                      <asp:DropDownList ID="dpldistrito" runat="server" OnSelectedIndexChanged="dpldistrito_SelectedIndexChanged" AutoPostBack="true"></asp:DropDownList>
+                      <asp:DropDownList ID="dpldistrito" runat="server" OnSelectedIndexChanged="dpldistrito_SelectedIndexChanged" AutoPostBack="true" requi></asp:DropDownList>
                                     </asp:DropDownList>
                                 </div>
                         </div>

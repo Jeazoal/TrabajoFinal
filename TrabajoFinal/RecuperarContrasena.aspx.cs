@@ -20,14 +20,12 @@ namespace TrabajoFinal
         {
             var correo = new RecuperarPasswordBL();
             var result = correo.recoverPassword(txtgmail.Text);
-            Label1.Text = result;
+            labelresult.Text = result;
 
             if (result != null)
             {
                 Session["RecuperarContrasena"] = result;
-
-                // Redirige a la página principal
-                Response.Redirect("RecuperarContrasena.aspx");
+                labelresult.Text = result;
             }
             else
             {

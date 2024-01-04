@@ -1,4 +1,4 @@
-﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Site1.Master" AutoEventWireup="true" CodeBehind="PaginaPrincipal.aspx.cs" Inherits="TrabajoFinal.Formulario_web1" %>
+﻿<%@ Page Title="" Language="C#" MasterPageFile="~/PlantillaFormulario.Master" AutoEventWireup="true" CodeBehind="FrmInicio.aspx.cs" Inherits="TrabajoFinal.Formulario_web14" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">

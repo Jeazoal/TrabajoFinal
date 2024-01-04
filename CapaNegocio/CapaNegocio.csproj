@@ -58,9 +58,11 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="CambiarContrasenaBL.cs" />
+    <Compile Include="DatosAcademicosBL.cs" />
     <Compile Include="DepartamentoBL.cs" />
     <Compile Include="DistritoBL.cs" />
     <Compile Include="EstadoCBL.cs" />
+    <Compile Include="ExperienciasBL.cs" />
     <Compile Include="LoginBL.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="ProvinciaBL.cs" />
