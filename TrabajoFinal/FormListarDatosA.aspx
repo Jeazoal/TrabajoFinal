@@ -1,11 +1,11 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/PlantillaForm.Master" AutoEventWireup="true" CodeBehind="FormListarDatosA.aspx.cs" Inherits="TrabajoFinal.Formulario_web112" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
-    <link rel="stylesheet" href="Style/FormContent.css" />
+    <link rel="stylesheet" href="Style/ContentForm.css" />
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
     <div class="divform">
             <h1>DATOS ACADEMICOS</h1>
-        <asp:HyperLink ID="HyperLink1" runat="server" NavigateUrl="~/FormAgregarDatosA.aspx">Agregar DatosAcademicos</asp:HyperLink>
+        <asp:HyperLink ID="HyperLink1" runat="server" NavigateUrl="~/FormAgregarDatosA.aspx">Agregar Datos Academicos</asp:HyperLink>
 <table>
     <tr>
         <td colspan="2" align='center'>

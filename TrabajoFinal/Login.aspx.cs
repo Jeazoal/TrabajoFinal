@@ -29,13 +29,10 @@ namespace TrabajoFinal
 
                 if (usuarioAutenticado != null)
                 {
-                    // Obtiene la información completa del usuario
                     DatosPersonales infoUsuario = loginBL.ObtenerInformacionUsuario(numeroDocumento);
 
-                    // Almacena la información del usuario en la sesión
                     Session["UsuarioAutenticado"] = infoUsuario;
 
-                    // Redirige al formulario deseado
                     Response.Redirect("FormListarDatosA.aspx", false);
                     Context.ApplicationInstance.CompleteRequest();
                 }

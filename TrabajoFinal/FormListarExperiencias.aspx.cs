@@ -1,4 +1,5 @@
-﻿using System;
+﻿using CapaNegocio;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
@@ -11,7 +12,9 @@ namespace TrabajoFinal
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-
+            ExperienciasBL ocompañiaBL = new ExperienciasBL();
+            gvListaE.DataSource = ocompañiaBL.listarExperiencias();
+            gvListaE.DataBind();
         }
     }
 }

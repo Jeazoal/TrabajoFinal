@@ -71,6 +71,12 @@
              <span>Configuracion</span>
            </a>
          </li>
+              <li class="item">
+                 <a href="FormEditarPerfil" class="link flex">
+                   <i class='bx bxs-user-detail' ></i>
+                   <span>Editar Perfil</span>
+                 </a>
+               </li>
        </ul>
      </div>
        
@@ -79,9 +85,11 @@
                    <asp:Image ID="imgFoto" runat="server" />
                </span>
    
-               <div class="data_text">                                         <asp:Label ID="lblNombre" runat="server"></asp:Label><br />
+               <div class="data_text">                                         
+                   <asp:Label ID="lblNombre" runat="server"></asp:Label><br />
             <asp:Label ID="lblnumerouser" runat="server"></asp:Label>
-                 <asp:Button ID="Button1" runat="server" Text="Button" />
+                   <br />
+                 <asp:Button ID="btnCerrar" runat="server" Text="Cerrar Sesion" BorderStyle="None" />
                 </div>
               </div>                       
    </div>

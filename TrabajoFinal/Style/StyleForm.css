@@ -151,6 +151,12 @@ body {
         color: #333;
     }
 
+div .data_text{
+    display:flex;
+    flex-direction:column;
+                
+}
+
 
 #sidebar-open {
     font-size: 30px;

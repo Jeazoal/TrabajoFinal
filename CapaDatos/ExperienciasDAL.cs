@@ -89,12 +89,7 @@ namespace CapaDatos
                             {
                                 experiencia.FechaFin = fechaFin;
                             }
-                            else
-                            {
-                                // Puedes asignar un valor predeterminado o manejar el error de otra manera
-                                experiencia.FechaFin = null; // o algún otro valor predeterminado
-                            }
-
+ 
                             lista.Add(experiencia);
                         }
                     }
@@ -154,11 +149,6 @@ namespace CapaDatos
                             {
                                 experiencia.FechaFin = fechaFin;
                             }
-                            else
-                            {
-                                // Puedes asignar un valor predeterminado o manejar el error de otra manera
-                                experiencia.FechaFin = null; // o algún otro valor predeterminado
-                            }
                         }
                     }
                 }
@@ -191,7 +181,7 @@ namespace CapaDatos
                     cmd.Parameters.AddWithValue("@FechaFin", experiencia.FechaFin);
                     cmd.Parameters.AddWithValue("@Cargo", experiencia.Cargo);
                     cmd.Parameters.AddWithValue("@NombreEmpresa", experiencia.NombreEmpresa);
-                    cmd.Parameters.AddWithValue("@RutaPdf", experiencia.RutaPdf);
+
 
                     cn.Open();
                     int filasAfectadas = cmd.ExecuteNonQuery();

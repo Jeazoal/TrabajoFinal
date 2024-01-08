@@ -9,7 +9,7 @@ using System.Web.UI.WebControls;
 
 namespace TrabajoFinal
 {
-    public partial class Formulario_web22 : System.Web.UI.Page
+    public partial class Formulario_web110 : System.Web.UI.Page
     {
         ExperienciasBL unDatoBL = new ExperienciasBL();
 
@@ -17,15 +17,17 @@ namespace TrabajoFinal
         {
             if (!Page.IsPostBack)
             {
-                Experiencias unDato = new Experiencias();
+                ExperienciasBL unExperienciaBL = new ExperienciasBL();
                 lblId.Text = Request.QueryString["id"];
-                unDato = unDatoBL.buscarExperiencias(Int32.Parse(lblId.Text));
-                if (unDatoBL != null)
-                {
 
-                    txtNombre.Text = unDato.NombreEmpresa;
-                    txtCargo.Text = unDato.Cargo;
-                    txtRuta.Text = unDato.RutaPdf;
+                Experiencias unaExperiencia = unExperienciaBL.buscarExperiencias(Int32.Parse(lblId.Text));
+
+                if (unaExperiencia != null)
+                {
+                    txtFechaInicio.Text = unaExperiencia.FechaInicio.ToString("yyyy-MM-dd");
+                    txtFechaFin.Text = unaExperiencia.FechaFin.ToString("yyyy-MM-dd");
+                    txtCargo.Text = unaExperiencia.Cargo;
+                    txtNombre.Text = unaExperiencia.NombreEmpresa;
 
                 }
             }
@@ -38,7 +40,7 @@ namespace TrabajoFinal
             string m = unDato.eliminarExperiencias(Int32.Parse(lblId.Text));
 
             Response.Write("<script language=javascript>alert('" + m + "');</script>");
-            Response.Write("<script language=javascript>document.location.href = 'FrmListarExperiencias.aspx';</script>");
+            Response.Write("<script language=javascript>document.location.href = 'FormListarExperiencias.aspx';</script>");
         }
     }
 }

@@ -73,20 +73,28 @@ namespace CapaDatos
                         using (SqlDataReader reader = cmd.ExecuteReader())
                         {
                             if (reader.Read())
-                            {
-                                // Suponiendo que tienes un procedimiento almacenado o consulta SQL
-                                // que devuelve la información completa del usuario, incluida la foto
+                            {                              
                                 return new DatosPersonales
                                 {
                                     Nombres = Convert.ToString(reader["Nombres"]),
                                     NumeroDocumento = Convert.ToString(reader["NumeroDocumento"]),
-                                    // Otros campos
-                                    Foto = Convert.ToString(reader["Foto"]),  // Ruta de la foto del usuario
+                                    ApellidoMaterno = Convert.ToString(reader["ApellidoMaterno"]),
+                                    ApellidoPaterno = Convert.ToString(reader["ApellidoPaterno"]),
+                                    Sexo = Convert.ToString(reader["Sexo"]),
+                                    EstadoCivilId = Convert.ToInt32(reader["EstadoCivilId"]),
+                                    Direccion = Convert.ToString(reader["Direccion"]),
+                                    Ubigeo = Convert.ToString(reader["Ubigeo"]),
+                                    Discapacidad = Convert.ToString(reader["Discapacidad"]),
+                                    DescripcionDiscapacidad = Convert.ToString(reader["DescripcionDiscapacidad"]),
+                                    Telefono = Convert.ToString(reader["Telefono"]),
+                                    Celular = Convert.ToString(reader["Celular"]),
+                                    CorreoElectronico = Convert.ToString(reader["CorreoElectronico"]),
+                                    Contrasena = Convert.ToString(reader["Contrasena"]),
+                                    Foto = Convert.ToString(reader["Foto"]),                  
                                 };
                             }
                             else
                             {
-                                // No se encontró al usuario
                                 return null;
                             }
                         }

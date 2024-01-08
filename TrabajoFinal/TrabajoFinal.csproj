@@ -89,18 +89,14 @@
     <Content Include="FormAgregarDatosA.aspx" />
     <Content Include="FormEditarDatosA.aspx" />
     <Content Include="FormEliminarDatosA.aspx" />
-    <Content Include="FrEliminarExperiencias.aspx" />
-    <Content Include="FrEditarExperiencias.aspx" />
-    <Content Include="FrAgregarExperiencias.aspx" />
-    <Content Include="FrmEditarExperiencias.aspx" />
-    <Content Include="FrmEliminarExperiencias.aspx" />
-    <Content Include="FrmAgregarExperiencias.aspx" />
-    <Content Include="FrmListarExperiencias.aspx" />
+    <Content Include="FormAgregarExperiencias.aspx" />
+    <Content Include="FormEditarExperiencias.aspx" />
+    <Content Include="FormEliminarExperiencias.aspx" />
+    <Content Include="FormEditarPerfil.aspx" />
     <Content Include="Imagenes\FondoHome.png" />
     <Content Include="Imagenes\Logo.png" />
     <Content Include="Imagenes\a.png" />
     <Content Include="RecuperarContrasena.aspx" />
-    <Content Include="Home.aspx" />
     <Content Include="Imagenes\HomeEcuesta.png" />
     <Content Include="Imagenes\HomePromocion.png" />
     <Content Include="Imagenes\HomeBaseDatos.png" />
@@ -115,7 +111,7 @@
     <Content Include="Scripts\PaginaInicial.js" />
     <Content Include="Scripts\Registrar.js" />
     <Content Include="Scripts\script.js" />
-    <Content Include="Style\FormContent.css" />
+    <Content Include="Style\ContentForm.css" />
     <Content Include="Style\FrmDhasboard.css" />
     <Content Include="Style\Home.css" />
     <Content Include="Style\Login.css" />
@@ -174,61 +170,33 @@
     <Compile Include="FormEliminarDatosA.aspx.designer.cs">
       <DependentUpon>FormEliminarDatosA.aspx</DependentUpon>
     </Compile>
-    <Compile Include="FrEliminarExperiencias.aspx.cs">
-      <DependentUpon>FrEliminarExperiencias.aspx</DependentUpon>
+    <Compile Include="FormAgregarExperiencias.aspx.cs">
+      <DependentUpon>FormAgregarExperiencias.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="FrEliminarExperiencias.aspx.designer.cs">
-      <DependentUpon>FrEliminarExperiencias.aspx</DependentUpon>
+    <Compile Include="FormAgregarExperiencias.aspx.designer.cs">
+      <DependentUpon>FormAgregarExperiencias.aspx</DependentUpon>
     </Compile>
-    <Compile Include="FrEditarExperiencias.aspx.cs">
-      <DependentUpon>FrEditarExperiencias.aspx</DependentUpon>
+    <Compile Include="FormEditarExperiencias.aspx.cs">
+      <DependentUpon>FormEditarExperiencias.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="FrEditarExperiencias.aspx.designer.cs">
-      <DependentUpon>FrEditarExperiencias.aspx</DependentUpon>
+    <Compile Include="FormEditarExperiencias.aspx.designer.cs">
+      <DependentUpon>FormEditarExperiencias.aspx</DependentUpon>
     </Compile>
-    <Compile Include="FrAgregarExperiencias.aspx.cs">
-      <DependentUpon>FrAgregarExperiencias.aspx</DependentUpon>
+    <Compile Include="FormEliminarExperiencias.aspx.cs">
+      <DependentUpon>FormEliminarExperiencias.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="FrAgregarExperiencias.aspx.designer.cs">
-      <DependentUpon>FrAgregarExperiencias.aspx</DependentUpon>
+    <Compile Include="FormEliminarExperiencias.aspx.designer.cs">
+      <DependentUpon>FormEliminarExperiencias.aspx</DependentUpon>
     </Compile>
-    <Compile Include="FrmEditarExperiencias.aspx.cs">
-      <DependentUpon>FrmEditarExperiencias.aspx</DependentUpon>
+    <Compile Include="FormEditarPerfil.aspx.cs">
+      <DependentUpon>FormEditarPerfil.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="FrmEditarExperiencias.aspx.designer.cs">
-      <DependentUpon>FrmEditarExperiencias.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="FrmEliminarExperiencias.aspx.cs">
-      <DependentUpon>FrmEliminarExperiencias.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="FrmEliminarExperiencias.aspx.designer.cs">
-      <DependentUpon>FrmEliminarExperiencias.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="FrmAgregarExperiencias.aspx.cs">
-      <DependentUpon>FrmAgregarExperiencias.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="FrmAgregarExperiencias.aspx.designer.cs">
-      <DependentUpon>FrmAgregarExperiencias.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="FrmListarExperiencias.aspx.cs">
-      <DependentUpon>FrmListarExperiencias.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="FrmListarExperiencias.aspx.designer.cs">
-      <DependentUpon>FrmListarExperiencias.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="PlantillaFormulario.Master.cs">
-      <DependentUpon>PlantillaFormulario.Master</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="PlantillaFormulario.Master.designer.cs">
-      <DependentUpon>PlantillaFormulario.Master</DependentUpon>
+    <Compile Include="FormEditarPerfil.aspx.designer.cs">
+      <DependentUpon>FormEditarPerfil.aspx</DependentUpon>
     </Compile>
     <Compile Include="RecuperarContrasena.aspx.cs">
       <DependentUpon>RecuperarContrasena.aspx</DependentUpon>
@@ -237,26 +205,12 @@
     <Compile Include="RecuperarContrasena.aspx.designer.cs">
       <DependentUpon>RecuperarContrasena.aspx</DependentUpon>
     </Compile>
-    <Compile Include="Home.aspx.cs">
-      <DependentUpon>Home.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="Home.aspx.designer.cs">
-      <DependentUpon>Home.aspx</DependentUpon>
-    </Compile>
     <Compile Include="PlantillaPaginasEmergentes.Master.cs">
       <DependentUpon>PlantillaPaginasEmergentes.Master</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="PlantillaPaginasEmergentes.Master.designer.cs">
       <DependentUpon>PlantillaPaginasEmergentes.Master</DependentUpon>
-    </Compile>
-    <Compile Include="PlantillaInicial.Master.cs">
-      <DependentUpon>PlantillaInicial.Master</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="PlantillaInicial.Master.designer.cs">
-      <DependentUpon>PlantillaInicial.Master</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="RegistrarDatos.aspx.cs">
@@ -283,9 +237,7 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
-    <Content Include="PlantillaInicial.Master" />
     <Content Include="PlantillaPaginasEmergentes.Master" />
-    <Content Include="PlantillaFormulario.Master" />
     <Content Include="PlantillaForm.Master" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
@@ -310,6 +262,7 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Certificados\" />
+    <Folder Include="Experiencias\" />
     <Folder Include="Fotos\" />
   </ItemGroup>
   <PropertyGroup>

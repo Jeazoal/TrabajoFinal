@@ -172,7 +172,7 @@ namespace CapaDatos
                     cmd.Parameters.AddWithValue("@tituloGrado", unDato.TituloGrado);
                     cmd.Parameters.AddWithValue("@centroEstudios", unDato.CentroEstudios);
                     cmd.Parameters.AddWithValue("@fechaGrado", unDato.FechaGrado);
-                    cmd.Parameters.AddWithValue("@rutaPdf", unDato.RutaPdf);
+
 
                     // abrir conexion
                     cn.Open();

@@ -1,5 +1,4 @@
-﻿
-input {
+﻿input {
     width: 50%;
     padding: 10px;
     margin-top: 5px;
@@ -7,7 +6,17 @@ input {
     border-radius: 10px;
 }
 
+#btnCerrar {
+    width: 100%;
+    background-color: #1d5dab;
+    padding: 5px;
+    border-radius: 3px;
+    color: #fff;
+}
 
+    #btnCerrar:hover {
+        background-color: #067dff
+    }
 
 table {
     border-collapse: collapse;
@@ -39,11 +48,11 @@ tr:hover {
     background-color: #f5f5f5;
 }
 
-h1{
-    font-size:40px;
-    color:#04528d;
-    padding-top:10px;
-    padding-bottom:10px;
+h1 {
+    font-size: 40px;
+    color: #04528d;
+    padding-top: 10px;
+    padding-bottom: 10px;
 }
 
 .divform a {
@@ -56,11 +65,10 @@ h1{
 }
 
 
-.divform a:hover {
-    color: #fff;
-}
+    .divform a:hover {
+        color: #fff;
+    }
 
     .divform a:hover {
         background: #067dff;
     }
-
