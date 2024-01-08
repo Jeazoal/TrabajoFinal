@@ -28,7 +28,7 @@ namespace Entidades
         public string Celular { get; set; }
         public string CorreoElectronico { get; set; }
         public string Contrasena { get; set; }
-        public byte[] Foto { get; set; }
+        public string Foto { get; set; }
         public DateTime FechaRegistro { get; set; }
         public DateTime? FechaModificacion { get; set; }
 

@@ -6,8 +6,6 @@
     <div class="container">
      <h1>Recuperar Contraseña</h1>
       <p>Para continuar, primero debes verificar tu identidad.Ingresa tu correo electrónico con el que te registraste</p>   
-         <asp:Label ID="lblCorreoElectronico" runat="server" Text="Correo Electrónico:"></asp:Label>
-         <asp:TextBox ID="txtCorreoElectronico" runat="server" placeholder="Ingresa tu correo Electronico"></asp:TextBox>
          <asp:Label ID="lblNuevaContrasena" runat="server" Text="Nueva Contraseña:"></asp:Label>
          <asp:TextBox ID="txtNuevaContrasena" runat="server" TextMode="Password" placeholder="Ingresa nueva contraseña"></asp:TextBox>
          <asp:Button ID="btnCambiarContrasena" runat="server" Text="Cambiar Contraseña" OnClick="btnCambiarContrasena_Click" />

@@ -9,7 +9,7 @@ using System.Web.UI.WebControls;
 
 namespace TrabajoFinal
 {
-    public partial class PaginaInicial : System.Web.UI.MasterPage
+    public partial class WebForm1 : System.Web.UI.Page
     {
         protected void Page_Load(object sender, EventArgs e)
         {
@@ -29,10 +29,15 @@ namespace TrabajoFinal
 
                 if (usuarioAutenticado != null)
                 {
-                    Session["UsuarioAutenticado"] = usuarioAutenticado;
+                    // Obtiene la información completa del usuario
+                    DatosPersonales infoUsuario = loginBL.ObtenerInformacionUsuario(numeroDocumento);
 
-                    Response.Redirect("FrmListarDatosAcademicos.aspx", false); 
-                    Context.ApplicationInstance.CompleteRequest(); 
+                    // Almacena la información del usuario en la sesión
+                    Session["UsuarioAutenticado"] = infoUsuario;
+
+                    // Redirige al formulario deseado
+                    Response.Redirect("FormListarDatosA.aspx", false);
+                    Context.ApplicationInstance.CompleteRequest();
                 }
                 else
                 {

@@ -1,0 +1,101 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="PlantillaForm.Master.cs" Inherits="TrabajoFinal.Site1" %>
+
+<!DOCTYPE html>
+
+<html>
+<head runat="server">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <title></title>
+        <link rel="stylesheet" href="Style/StyleForm.css" />
+    <link flex href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet" />
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+        <script src="Scripts/JavaScript.js" defer></script>
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body>
+    <form id="form1" runat="server">
+     <nav class="sidebar locked">
+   <div class="logo_items flex">
+     <span class="nav_image">
+       <img src="Imagenes/Logo.png" alt="logo_img" />
+     </span>
+     <span class="logo_name">Educ<i class='bx bxs-flame'></i>Net</span>
+   </div>
+   <div class="menu_container">
+     <div class="menu_items">
+       <ul class="menu_item">
+         <div class="menu_title flex">
+           <span class="title">Inicio</span>
+           <span class="line"></span>
+         </div>
+         <li class="item">
+           <a href="WebForm2.aspx" class="link flex">
+             <i class="bx bx-home-alt"></i>
+             <span>Home</span>
+           </a>
+         </li>     
+       </ul>
+       <ul class="menu_item">
+         <div class="menu_title flex">
+           <span class="title">Editor</span>
+           <span class="line"></span>
+         </div>
+         <li class="item">
+           <a href="FormListarDatosA.aspx" class="link flex">
+             <i class='bx bx-clipboard'></i>
+             <span>Datos Academicos</span>
+           </a>
+         </li>
+         <li class="item">
+           <a href="FormListarExperiencias.aspx" class="link flex">
+             <i class='bx bx-file'></i>
+             <span>Experiencias</span>
+           </a>
+         </li>
+         <li class="item">
+           <a href="#" class="link flex">
+             <i class='bx bx-book-alt'></i>
+             <span>Cursos</span>
+           </a>
+         </li>
+       </ul>
+       <ul class="menu_item">
+         <div class="menu_title flex">
+           <span class="title">Setting</span>
+           <span class="line"></span>
+         </div>   
+         <li class="item">
+           <a href="#" class="link flex">
+             <i class="bx bx-cog"></i>
+             <span>Configuracion</span>
+           </a>
+         </li>
+       </ul>
+     </div>
+       
+            <div class="sidebar_profile flex">
+               <span class="nav_image">
+                   <asp:Image ID="imgFoto" runat="server" />
+               </span>
+   
+               <div class="data_text">                                         <asp:Label ID="lblNombre" runat="server"></asp:Label><br />
+            <asp:Label ID="lblnumerouser" runat="server"></asp:Label>
+                 <asp:Button ID="Button1" runat="server" Text="Button" />
+                </div>
+              </div>                       
+   </div>
+ </nav>
+    <section class="section_home">
+        
+     <div>
+         <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+         </asp:ContentPlaceHolder>
+     </div>
+    </section>
+    </form>  
+   
+            <script src="Scripts/JavaScript.js" defer></script>
+
+</body>
+</html>

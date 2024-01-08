@@ -1,0 +1,102 @@
+﻿@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap');
+
+body {
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+.Content {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    width: 100%;
+    font-weight: bold;
+}
+
+.Home-left {
+    width: 50%;
+    overflow: hidden;
+    height: 100vh;
+    background-image: url('../Imagenes/FondoHome.png');
+    background-size: cover; 
+    background-position: center; 
+}
+
+.Home-right {
+    width: 50%;
+    text-align: center;
+    justify-content: center;
+    display: flex;
+    flex-direction: column;
+}
+
+    .Home-right h1 {
+        font-weight: 600;
+        font-size: 50px;
+    }
+
+    .Home-right i {
+        color: #5271FF;
+    }
+
+    .Home-right h2 {
+        color: #393536;
+        font-size: 24px;
+    }
+
+    .Home-right .div-link {
+        font-size: 18px;
+        margin: 5px;
+    }
+
+.Content a {
+    color: #5271FF;
+    text-decoration: none;
+    transition: border-bottom 0.1s ease;
+    font-size: 18px;
+}
+
+    .Content a:hover {
+        border-bottom: 2px solid #0eb5ff;
+    }
+
+
+#btnLogin {
+    background: #5271FF;
+    width: 50%;
+    height: 56px;
+    border-radius: 10px;
+    margin-left: 25%;
+    font-size: 18px;
+    font-weight: bold;
+    color: #fff;
+    margin-bottom: 20px;
+    margin-top: 20px;
+}
+
+    #btnLogin:hover {
+        background: #087a8f;
+        cursor:pointer;
+    }
+
+input {
+    margin-left: 20%;
+    margin-top: 25px;
+    height: 40px;
+    width: 60%;
+    border-radius: 10px;
+    border: 1px solid #5271FF;
+    padding: 5px;
+    font-size: 19px;
+    transition: border-color 0.3s ease;
+}
+
+    input:focus,
+    input:not(:placeholder-shown) {
+        border-color: #5271FF; 
+    }
+
+    input:hover {
+        border-color: #5271FF; 
+    }

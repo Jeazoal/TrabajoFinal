@@ -9,10 +9,9 @@ using System.Web.UI.WebControls;
 
 namespace TrabajoFinal
 {
-    public partial class Formulario_web110 : System.Web.UI.Page
+    public partial class Formulario_web115 : System.Web.UI.Page
     {
         DatosAcademicosBL unDatoBL = new DatosAcademicosBL();
-
         protected void Page_Load(object sender, EventArgs e)
         {
             if (!Page.IsPostBack)
@@ -20,27 +19,23 @@ namespace TrabajoFinal
                 DatosAcademicos unDato = new DatosAcademicos();
                 lblId.Text = Request.QueryString["id"];
                 unDato = unDatoBL.buscarDatos(Int32.Parse(lblId.Text));
-                if (unDatoBL != null)
-                {
-                    txtTitulo.Text = unDato.TituloGrado;
-                    txtCEstudios.Text = unDato.CentroEstudios;
-                    txtRuta.Text = unDato.RutaPdf;
 
-                }
+                
+                txtTitulo.Text = unDato.TituloGrado;
+                    txtCEstudios.Text = unDato.CentroEstudios;
+                    txtFecha.Text = unDato.FechaGrado.ToString("yyyy-MM-dd");
             }
         }
 
-
-        protected void btnEliminar_Click(object sender, EventArgs e)
+        protected void btnActualizar_Click(object sender, EventArgs e)
         {
-
 
             DatosAcademicosBL unDato = new DatosAcademicosBL();
 
-            string m = unDato.eliminarDatos(Int32.Parse(lblId.Text));
+            string m = unDato.actualizarDatos(new DatosAcademicos(Int32.Parse(lblId.Text), txtCEstudios.Text, txtTitulo.Text, DateTime.Parse(txtFecha.Text), txtRuta.Text));
 
             Response.Write("<script language=javascript>alert('" + m + "');</script>");
-            Response.Write("<script language=javascript>document.location.href = 'FrmListarDatosAcademicos.aspx';</script>");
+            Response.Write("<script language=javascript>document.location.href = 'FormListarDatosA.aspx';</script>");
         }
     }
 }

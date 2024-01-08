@@ -21,8 +21,6 @@ namespace CapaDatos
                     using (SqlCommand cmd = new SqlCommand("RegistrarDatos", cn))
                     {
                         cmd.CommandType = CommandType.StoredProcedure;
-
-                        // Ajusta los parámetros según tu procedimiento almacenado
                         cmd.Parameters.AddWithValue("@TipoDocumentoId", datosPersonales.TipoDocumentoId);
                         cmd.Parameters.AddWithValue("@NumeroDocumento", datosPersonales.NumeroDocumento);
                         cmd.Parameters.AddWithValue("@ApellidoPaterno", datosPersonales.ApellidoPaterno);
@@ -46,7 +44,6 @@ namespace CapaDatos
                 }
                 catch (Exception ex)
                 {
-                    // Manejar la excepción según tus necesidades
                     Console.WriteLine("Error al registrar datos personales: " + ex.Message);
                 }
             }

@@ -11,43 +11,43 @@ namespace TrabajoFinal
 {
 
 
-    public partial class Formulario_web13
+    public partial class WebForm1
     {
 
         /// <summary>
-        /// Control lblNuevaContrasena.
+        /// Control form1.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lblNuevaContrasena;
+        protected global::System.Web.UI.HtmlControls.HtmlForm form1;
 
         /// <summary>
-        /// Control txtNuevaContrasena.
+        /// Control txtdni.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtNuevaContrasena;
+        protected global::System.Web.UI.WebControls.TextBox txtdni;
 
         /// <summary>
-        /// Control btnCambiarContrasena.
+        /// Control txtcontraseña.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button btnCambiarContrasena;
+        protected global::System.Web.UI.WebControls.TextBox txtcontraseña;
 
         /// <summary>
-        /// Control lblMensaje.
+        /// Control btnLogin.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lblMensaje;
+        protected global::System.Web.UI.WebControls.Button btnLogin;
     }
 }

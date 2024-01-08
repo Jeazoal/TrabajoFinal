@@ -17,7 +17,6 @@ namespace CapaEntidades
             EstadoCivil = estadoCivil;
         }
 
-        // Constructor vacío si es necesario
         public EstadoC()
         {
         }

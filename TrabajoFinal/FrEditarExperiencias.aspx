@@ -25,16 +25,16 @@
    <div class="row mt-2">
        <div class="col-4"><asp:Label ID="Label6" runat="server" Text="Nombre de la Empresa"></asp:Label></div>
       <div class="col-4"><asp:TextBox ID="txtNombre" runat="server"></asp:TextBox></div>
-  </div>
-      <div class="row mt-2">
-       <div class="col-4"><asp:Label ID="Label5" runat="server" Text="Subir Certificado"></asp:Label></div>
-      <div class="col-4"><asp:FileUpload ID="fuCargar" runat="server" /></div>
-      </div>
-      <div class="row mt-2">
-          <div class="col-4">
-              <asp:TextBox ID="txtRuta" runat="server"></asp:TextBox>
-          </div>
-      </div>
+  </div>   
+           <div class="row mt-2">
+  <div class="col-4"><asp:Label ID="Label5" runat="server" Text="Subir Certificado"></asp:Label></div>
+ <div class="col-4"><asp:FileUpload ID="fuCargar" runat="server" /></div>
+ </div>
+ <div class="row mt-2">
+     <div class="col-4">
+         <asp:TextBox ID="txtRuta" runat="server"></asp:TextBox>
+     </div>
+ </div>
       <div class="col-4">
           <asp:Button ID="btnActualizar" runat="server" Text="Actualizar Experiencias" OnClick="btnActualizar_Click" />
       </div>

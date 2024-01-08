@@ -56,5 +56,50 @@ namespace CapaDatos
                 }
             }
         }
+
+        public DatosPersonales ObtenerInformacionCompleta(string numeroDocumento)
+        {
+            using (SqlConnection cn = new ConexionBD().conectar())
+            {
+                try
+                {
+                    using (SqlCommand cmd = new SqlCommand("ObtenerInformacionCompletaUsuario", cn))
+                    {
+                        cmd.CommandType = CommandType.StoredProcedure;
+                        cmd.Parameters.AddWithValue("@NumeroDocumento", numeroDocumento);
+
+                        cn.Open();
+
+                        using (SqlDataReader reader = cmd.ExecuteReader())
+                        {
+                            if (reader.Read())
+                            {
+                                // Suponiendo que tienes un procedimiento almacenado o consulta SQL
+                                // que devuelve la información completa del usuario, incluida la foto
+                                return new DatosPersonales
+                                {
+                                    Nombres = Convert.ToString(reader["Nombres"]),
+                                    NumeroDocumento = Convert.ToString(reader["NumeroDocumento"]),
+                                    // Otros campos
+                                    Foto = Convert.ToString(reader["Foto"]),  // Ruta de la foto del usuario
+                                };
+                            }
+                            else
+                            {
+                                // No se encontró al usuario
+                                return null;
+                            }
+                        }
+                    }
+                }
+                catch (Exception ex)
+                {
+                    // Manejar la excepción según tus necesidades
+                    Console.WriteLine("Error al obtener información completa del usuario: " + ex.Message);
+                    return null;
+                }
+            }
+        }
+
     }
 }

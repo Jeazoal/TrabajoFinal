@@ -11,17 +11,8 @@ namespace TrabajoFinal
 {
 
 
-    public partial class Formulario_web110
+    public partial class Formulario_web115
     {
-
-        /// <summary>
-        /// Control Label3.
-        /// </summary>
-        /// <remarks>
-        /// Campo generado automáticamente.
-        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Label Label3;
 
         /// <summary>
         /// Control lblId.
@@ -123,12 +114,12 @@ namespace TrabajoFinal
         protected global::System.Web.UI.WebControls.TextBox txtRuta;
 
         /// <summary>
-        /// Control btnEliminar.
+        /// Control btnActualizar.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button btnEliminar;
+        protected global::System.Web.UI.WebControls.Button btnActualizar;
     }
 }

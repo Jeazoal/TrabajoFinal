@@ -84,19 +84,21 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="CambiarContrasena.aspx" />
+    <Content Include="FormListarDatosA.aspx" />
+    <Content Include="FormListarExperiencias.aspx" />
+    <Content Include="FormAgregarDatosA.aspx" />
+    <Content Include="FormEditarDatosA.aspx" />
+    <Content Include="FormEliminarDatosA.aspx" />
     <Content Include="FrEliminarExperiencias.aspx" />
     <Content Include="FrEditarExperiencias.aspx" />
     <Content Include="FrAgregarExperiencias.aspx" />
-    <Content Include="FrEliminarDatosAcademicos.aspx" />
-    <Content Include="FrAgregarDatosAcademicos.aspx" />
-    <Content Include="FrEditarDatosAcademicos.aspx" />
     <Content Include="FrmEditarExperiencias.aspx" />
     <Content Include="FrmEliminarExperiencias.aspx" />
     <Content Include="FrmAgregarExperiencias.aspx" />
     <Content Include="FrmListarExperiencias.aspx" />
-    <Content Include="FrmInicio.aspx" />
-    <Content Include="FrmListarDatosAcademicos.aspx" />
-    <Content Include="Imagenes\logo.png" />
+    <Content Include="Imagenes\FondoHome.png" />
+    <Content Include="Imagenes\Logo.png" />
+    <Content Include="Imagenes\a.png" />
     <Content Include="RecuperarContrasena.aspx" />
     <Content Include="Home.aspx" />
     <Content Include="Imagenes\HomeEcuesta.png" />
@@ -108,12 +110,16 @@
     <Content Include="Imagenes\Login.png" />
     <Content Include="Imagenes\signup.png" />
     <Content Include="RegistrarDatos.aspx" />
-    <Content Include="script.js" />
     <Content Include="Scripts\Home.js" />
+    <Content Include="Scripts\Loginportal.js" />
     <Content Include="Scripts\PaginaInicial.js" />
     <Content Include="Scripts\Registrar.js" />
     <Content Include="Scripts\script.js" />
+    <Content Include="Style\FormContent.css" />
+    <Content Include="Style\FrmDhasboard.css" />
     <Content Include="Style\Home.css" />
+    <Content Include="Style\Login.css" />
+    <Content Include="Style\PaginaLogin.css" />
     <Content Include="Style\Pinicial.css" />
     <Content Include="Style\RecuperarC.css" />
     <Content Include="Style\RecuperarForm.css" />
@@ -121,7 +127,9 @@
     <Content Include="Style\PEmergentes.css" />
     <Content Include="Style\PaginaRegistrar.css" />
     <Content Include="Style\formularios.css" />
+    <Content Include="Style\StyleForm.css" />
     <Content Include="Web.config" />
+    <Content Include="Login.aspx" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="CambiarContrasena.aspx.cs">
@@ -130,6 +138,41 @@
     </Compile>
     <Compile Include="CambiarContrasena.aspx.designer.cs">
       <DependentUpon>CambiarContrasena.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="FormListarDatosA.aspx.cs">
+      <DependentUpon>FormListarDatosA.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="FormListarDatosA.aspx.designer.cs">
+      <DependentUpon>FormListarDatosA.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="FormListarExperiencias.aspx.cs">
+      <DependentUpon>FormListarExperiencias.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="FormListarExperiencias.aspx.designer.cs">
+      <DependentUpon>FormListarExperiencias.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="FormAgregarDatosA.aspx.cs">
+      <DependentUpon>FormAgregarDatosA.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="FormAgregarDatosA.aspx.designer.cs">
+      <DependentUpon>FormAgregarDatosA.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="FormEditarDatosA.aspx.cs">
+      <DependentUpon>FormEditarDatosA.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="FormEditarDatosA.aspx.designer.cs">
+      <DependentUpon>FormEditarDatosA.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="FormEliminarDatosA.aspx.cs">
+      <DependentUpon>FormEliminarDatosA.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="FormEliminarDatosA.aspx.designer.cs">
+      <DependentUpon>FormEliminarDatosA.aspx</DependentUpon>
     </Compile>
     <Compile Include="FrEliminarExperiencias.aspx.cs">
       <DependentUpon>FrEliminarExperiencias.aspx</DependentUpon>
@@ -151,27 +194,6 @@
     </Compile>
     <Compile Include="FrAgregarExperiencias.aspx.designer.cs">
       <DependentUpon>FrAgregarExperiencias.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="FrEliminarDatosAcademicos.aspx.cs">
-      <DependentUpon>FrEliminarDatosAcademicos.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="FrEliminarDatosAcademicos.aspx.designer.cs">
-      <DependentUpon>FrEliminarDatosAcademicos.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="FrAgregarDatosAcademicos.aspx.cs">
-      <DependentUpon>FrAgregarDatosAcademicos.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="FrAgregarDatosAcademicos.aspx.designer.cs">
-      <DependentUpon>FrAgregarDatosAcademicos.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="FrEditarDatosAcademicos.aspx.cs">
-      <DependentUpon>FrEditarDatosAcademicos.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="FrEditarDatosAcademicos.aspx.designer.cs">
-      <DependentUpon>FrEditarDatosAcademicos.aspx</DependentUpon>
     </Compile>
     <Compile Include="FrmEditarExperiencias.aspx.cs">
       <DependentUpon>FrmEditarExperiencias.aspx</DependentUpon>
@@ -200,20 +222,6 @@
     </Compile>
     <Compile Include="FrmListarExperiencias.aspx.designer.cs">
       <DependentUpon>FrmListarExperiencias.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="FrmInicio.aspx.cs">
-      <DependentUpon>FrmInicio.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="FrmInicio.aspx.designer.cs">
-      <DependentUpon>FrmInicio.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="FrmListarDatosAcademicos.aspx.cs">
-      <DependentUpon>FrmListarDatosAcademicos.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="FrmListarDatosAcademicos.aspx.designer.cs">
-      <DependentUpon>FrmListarDatosAcademicos.aspx</DependentUpon>
     </Compile>
     <Compile Include="PlantillaFormulario.Master.cs">
       <DependentUpon>PlantillaFormulario.Master</DependentUpon>
@@ -258,12 +266,27 @@
     <Compile Include="RegistrarDatos.aspx.designer.cs">
       <DependentUpon>RegistrarDatos.aspx</DependentUpon>
     </Compile>
+    <Compile Include="PlantillaForm.Master.cs">
+      <DependentUpon>PlantillaForm.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="PlantillaForm.Master.designer.cs">
+      <DependentUpon>PlantillaForm.Master</DependentUpon>
+    </Compile>
+    <Compile Include="Login.aspx.cs">
+      <DependentUpon>Login.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Login.aspx.designer.cs">
+      <DependentUpon>Login.aspx</DependentUpon>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
     <Content Include="PlantillaInicial.Master" />
     <Content Include="PlantillaPaginasEmergentes.Master" />
     <Content Include="PlantillaFormulario.Master" />
+    <Content Include="PlantillaForm.Master" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
@@ -284,6 +307,10 @@
       <Project>{0b0c9330-69c3-467d-bd53-913a66355985}</Project>
       <Name>CapaNegocio</Name>
     </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Certificados\" />
+    <Folder Include="Fotos\" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

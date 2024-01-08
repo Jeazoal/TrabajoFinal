@@ -133,22 +133,31 @@ namespace TrabajoFinal
         {
             try
             {
-                int tipoDocumentoId = Convert.ToInt32(dpltipodocumento.SelectedValue);
-                string numeroDocumento = txtnumeroDocumento.Text;
-                string apellidoPaterno = txtapepaterno.Text;
-                string apellidoMaterno = txtapematerno.Text;
-                string nombres = txtnombres.Text;
-                string sexo = rbtmasculino.Checked ? "M" : (rbtfemenino.Checked ? "F" : string.Empty); // Asignar "M" si masculino, "F" si femenino
-                int estadoCivilId = Convert.ToInt32(dplEstadoCivil.SelectedValue);
-                string direccion = txtdireccion.Text;
-                string ubigeo = dpldistrito.SelectedValue;
-                string discapacidad = rbtsi.Checked ? "Si" : (rbtno.Checked ? "No" : string.Empty); // Asignar "Si" si tiene discapacidad, "No" si no tiene
-                string descripcionDiscapacidad = txtdiscpacidad.Text;
-                string telefono = txttelefono.Text;
-                string celular = txtcelular.Text;
-                string correoElectronico = txtgmail.Text;
-                string contrasena = txtcontrasena.Text;
 
+                if (fileInput.HasFile)
+                {
+                    // Obtiene el nombre del archivo
+                    string nombreArchivo = fileInput.FileName;
+
+                    // Guarda el archivo en una ubicación específica en el servidor
+                    string rutaGuardar = Server.MapPath("~/Fotos/" + nombreArchivo);
+                    fileInput.SaveAs(rutaGuardar);
+                    int tipoDocumentoId = Convert.ToInt32(dpltipodocumento.SelectedValue);
+                    string numeroDocumento = txtnumeroDocumento.Text;
+                    string apellidoPaterno = txtapepaterno.Text;
+                    string apellidoMaterno = txtapematerno.Text;
+                    string nombres = txtnombres.Text;
+                    string sexo = rbtmasculino.Checked ? "M" : (rbtfemenino.Checked ? "F" : string.Empty); // Asignar "M" si masculino, "F" si femenino
+                    int estadoCivilId = Convert.ToInt32(dplEstadoCivil.SelectedValue);
+                    string direccion = txtdireccion.Text;
+                    string ubigeo = dpldistrito.SelectedValue;
+                    string discapacidad = rbtsi.Checked ? "Si" : (rbtno.Checked ? "No" : string.Empty); // Asignar "Si" si tiene discapacidad, "No" si no tiene
+                    string descripcionDiscapacidad = txtdiscpacidad.Text;
+                    string telefono = txttelefono.Text;
+                    string celular = txtcelular.Text;
+                    string correoElectronico = txtgmail.Text;
+                    string contrasena = txtcontrasena.Text;
+                    string foto = rutaGuardar;
                 DatosPersonales datosPersonales = new DatosPersonales
                 {
                     TipoDocumentoId = tipoDocumentoId,
@@ -166,26 +175,21 @@ namespace TrabajoFinal
                     Celular = celular,
                     CorreoElectronico = correoElectronico,
                     Contrasena = contrasena,
+                    Foto = foto,
                 };
+                    RegistrarBL registrarBL = new RegistrarBL();
+                    registrarBL.RegistrarDatosPersonales(datosPersonales);
 
-                byte[] fotoBytes = null;
-                if (fileInput.HasFile)
+                    Response.Redirect("Login.aspx");
+
+                }
+                else
                 {
-                    using (System.IO.Stream stream = fileInput.PostedFile.InputStream)
-                    {
-                        using (System.IO.BinaryReader reader = new System.IO.BinaryReader(stream))
-                        {
-                            fotoBytes = reader.ReadBytes((int)stream.Length);
-                        }
-                    }
+                    // Mensaje si no se seleccionó ningún archivo
+                    Response.Write("<script language=javascript>alert('Seleccione un archivo Png, jpg');</script>");
                 }
 
-                datosPersonales.Foto = fotoBytes;
-
-                RegistrarBL registrarBL = new RegistrarBL();
-                registrarBL.RegistrarDatosPersonales(datosPersonales);
-
-                Response.Redirect("Home.aspx");
+                
             }
             catch (Exception ex)
             {
@@ -193,6 +197,16 @@ namespace TrabajoFinal
                 ScriptManager.RegisterStartupScript(this, this.GetType(), "showAlert", $"alert('Error durante el registro: {ex.Message}');", true);
 
             }
-        }    
+        }
+
+        protected void rbtsi_CheckedChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        protected void rbtno_CheckedChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }

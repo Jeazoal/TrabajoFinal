@@ -26,10 +26,14 @@ namespace TrabajoFinal
             {
                 Session["RecuperarContrasena"] = result;
                 labelresult.Text = result;
+
+                // Crear y almacenar la cookie
+                HttpCookie emailCookie = new HttpCookie("RecoveryEmail", txtgmail.Text);
+                emailCookie.Expires = DateTime.Now.AddMinutes(15); 
+                Response.Cookies.Add(emailCookie);
             }
             else
             {
-                // Muestra un mensaje de error si la autenticación falla
                 Response.Write("Autenticación fallida. Verifica tu número de documento y contraseña.");
             }
         }

@@ -26,5 +26,20 @@ namespace CapaNegocio
                 return null;
             }
         }
+
+        public DatosPersonales ObtenerInformacionUsuario(string numeroDocumento)
+        {
+            try
+            {
+                // Llama al DAL para obtener la información completa del usuario
+                return loginDAL.ObtenerInformacionCompleta(numeroDocumento);
+            }
+            catch (Exception ex)
+            {
+                // Manejar cualquier excepción que pueda ocurrir durante la obtención de información del usuario
+                Console.WriteLine("Error al obtener información del usuario: " + ex.Message);
+                return null;
+            }
+        }
     }
 }

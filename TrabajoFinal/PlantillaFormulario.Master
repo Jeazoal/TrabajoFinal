@@ -23,7 +23,7 @@
           <span class="link_name">Datos Academicos</span>
         </a>
         <ul class="sub-menu blank">
-          <li onclick="redireccionar('https://localhost:44380/FrmListarDatosAcademicos.aspx')><a class="link_name" href="/FrmListarDatosAcademicos.aspx">Datos Academicos</a></li>
+          <li><a class="link_name" href="/FrmListarDatosAcademicos.aspx">Datos Academicos</a></li>
         </ul>
       </li>
         <li>
@@ -32,7 +32,7 @@
     <span class="link_name">Experiencias</span>
   </a>
   <ul class="sub-menu blank">
-    <li><a class="link_name" src=" https://localhost:44380/FrmListarExperiencias.aspx">Experiencias</a></li>
+    <li><a class="link_name" href="/FrmListarExperiencias.aspx">Experiencias</a></li>
   </ul>
 </li>
       <li>

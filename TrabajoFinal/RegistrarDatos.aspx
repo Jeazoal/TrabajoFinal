@@ -117,11 +117,11 @@
                                        <label>¿Cuentá Con Discapacidad?</label>
                                        <div class="rbtinput">
                                            <div class="item-rbt">
-                                               <asp:RadioButton ID="rbtsi" GroupName="discapacidad" runat="server" name="gender" />
+                                               <asp:RadioButton ID="rbtsi" GroupName="discapacidad" runat="server" name="gender" OnCheckedChanged="rbtsi_CheckedChanged" />
  <label for="check-male">Si</label>
                                            </div>
                                             <div class="item-rbt">
-                                                 <asp:RadioButton ID="rbtno" GroupName="discapacidad" runat="server" name="gender" />
+                                                 <asp:RadioButton ID="rbtno" GroupName="discapacidad" runat="server" name="gender" OnCheckedChanged="rbtno_CheckedChanged" />
   <label for="check-female">No</label>
                                            </div>                                   
                                        </div>                     

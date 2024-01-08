@@ -51,7 +51,7 @@
               <a href="RecuperarContrasena.aspx" class="forgot_pw">¿Olvidaste tu contraseñá?</a>
             </div>
               <asp:Button ID="btnLogin" runat="server" Text="Ingresar" BorderStyle="None" OnClick="btnLogin_Click" />
-            <div class="login_signup">Don't have an account? <a href="Registro.aspx" id="signup">Signup</a></div>
+            <div class="login_signup">¿No tiene una cuenta? <a href="RegistrarDatos.aspx" id="signup">Registrese Aquí</a></div>
           </form>
         </div>
       </div>

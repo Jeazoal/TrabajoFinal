@@ -11,7 +11,7 @@ namespace TrabajoFinal
 {
 
 
-    public partial class Formulario_web2
+    public partial class Formulario_web112
     {
 
         /// <summary>
