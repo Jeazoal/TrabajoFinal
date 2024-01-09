@@ -27,6 +27,9 @@ namespace CapaNegocio
             }
         }
 
+        
+        
+
         public DatosPersonales ObtenerInformacionUsuario(string numeroDocumento)
         {
             try

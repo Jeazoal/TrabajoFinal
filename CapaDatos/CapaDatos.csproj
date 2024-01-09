@@ -57,6 +57,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="ActualizarDAL.cs" />
     <Compile Include="CambiarContrasenaDAL.cs" />
     <Compile Include="ConexionDB.cs" />
     <Compile Include="CorreoSoporteDAL.cs" />

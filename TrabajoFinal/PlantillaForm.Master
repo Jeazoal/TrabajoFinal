@@ -5,6 +5,8 @@
 <html>
 <head runat="server">
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+
+
     <title></title>
         <link rel="stylesheet" href="Style/StyleForm.css" />
     <link flex href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet" />
@@ -72,7 +74,7 @@
            </a>
          </li>
               <li class="item">
-                 <a href="FormEditarPerfil" class="link flex">
+                 <a href="FormEditarPerfil.aspx" class="link flex">
                    <i class='bx bxs-user-detail' ></i>
                    <span>Editar Perfil</span>
                  </a>
@@ -86,10 +88,9 @@
                </span>
    
                <div class="data_text">                                         
-                   <asp:Label ID="lblNombre" runat="server"></asp:Label><br />
-            <asp:Label ID="lblnumerouser" runat="server"></asp:Label>
-                   <br />
-                 <asp:Button ID="btnCerrar" runat="server" Text="Cerrar Sesion" BorderStyle="None" />
+                   <asp:Label ID="lblNombre" runat="server"></asp:Label>
+                   <asp:Label ID="lblnumerouser" runat="server"></asp:Label>
+                 <asp:Button ID="btnCerrar" runat="server" Text="Cerrar Sesion" BorderStyle="None" OnClick="btnCerrar_Click" />
                 </div>
               </div>                       
    </div>

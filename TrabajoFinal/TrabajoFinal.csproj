@@ -96,6 +96,7 @@
     <Content Include="Imagenes\FondoHome.png" />
     <Content Include="Imagenes\Logo.png" />
     <Content Include="Imagenes\a.png" />
+    <Content Include="Imagenes\boteditar.png" />
     <Content Include="RecuperarContrasena.aspx" />
     <Content Include="Imagenes\HomeEcuesta.png" />
     <Content Include="Imagenes\HomePromocion.png" />
@@ -116,6 +117,7 @@
     <Content Include="Style\Home.css" />
     <Content Include="Style\Login.css" />
     <Content Include="Style\PaginaLogin.css" />
+    <Content Include="Style\PerfilForm.css" />
     <Content Include="Style\Pinicial.css" />
     <Content Include="Style\RecuperarC.css" />
     <Content Include="Style\RecuperarForm.css" />

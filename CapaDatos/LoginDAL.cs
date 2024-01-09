@@ -75,7 +75,7 @@ namespace CapaDatos
                             if (reader.Read())
                             {                              
                                 return new DatosPersonales
-                                {
+                                {                                    
                                     Nombres = Convert.ToString(reader["Nombres"]),
                                     NumeroDocumento = Convert.ToString(reader["NumeroDocumento"]),
                                     ApellidoMaterno = Convert.ToString(reader["ApellidoMaterno"]),
@@ -90,7 +90,7 @@ namespace CapaDatos
                                     Celular = Convert.ToString(reader["Celular"]),
                                     CorreoElectronico = Convert.ToString(reader["CorreoElectronico"]),
                                     Contrasena = Convert.ToString(reader["Contrasena"]),
-                                    Foto = Convert.ToString(reader["Foto"]),                  
+                                    Foto = Convert.ToString(reader["Foto"]),
                                 };
                             }
                             else
@@ -108,6 +108,8 @@ namespace CapaDatos
                 }
             }
         }
+
+
 
     }
 }

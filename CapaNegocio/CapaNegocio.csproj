@@ -57,6 +57,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="ActualizarBL.cs" />
     <Compile Include="CambiarContrasenaBL.cs" />
     <Compile Include="DatosAcademicosBL.cs" />
     <Compile Include="DepartamentoBL.cs" />

@@ -6,6 +6,8 @@
     border-radius: 10px;
 }
 
+
+
 #btnCerrar {
     width: 100%;
     background-color: #1d5dab;
@@ -13,6 +15,9 @@
     border-radius: 3px;
     color: #fff;
 }
+
+
+
 
     #btnCerrar:hover {
         background-color: #067dff
