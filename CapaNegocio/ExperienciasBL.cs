@@ -31,14 +31,10 @@ namespace CapaNegocio
         {
             try
             {
-                // Puedes agregar aquí lógica de negocio adicional antes de actualizar la experiencia si es necesario
-
-                // Llama al método de la capa de datos para actualizar la experiencia
                 return experienciasDL.Actualizar(experiencia);
             }
             catch (Exception ex)
             {
-                // Maneja la excepción según tus necesidades
                 throw new Exception("Error en la capa de negocios al actualizar experiencia.", ex);
             }
         }
