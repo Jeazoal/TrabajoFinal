@@ -15,12 +15,10 @@ namespace CapaNegocio
         {
             try
             {
-                // Llama al DAL para registrar datos personales
                 registrarDAL.RegistrarDatosPersonales(datosPersonales);
             }
             catch (Exception ex)
             {
-                // Manejar cualquier excepción que pueda ocurrir durante el proceso de registro
                 Console.WriteLine("Error al registrar datos personales: " + ex.Message);
             }
         }
