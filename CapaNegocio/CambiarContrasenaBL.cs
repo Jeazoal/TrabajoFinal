@@ -15,12 +15,10 @@ namespace CapaNegocio
         {
             try
             {
-                // Llama al DAL para cambiar la contraseña
                 return cambiarContrasenaDAL.CambiarContrasena(correoElectronico, nuevaContrasena);
             }
             catch (Exception ex)
             {
-                // Manejar cualquier excepción que pueda ocurrir durante el cambio de contraseña
                 return "Error al cambiar la contraseña: " + ex.Message;
             }
         }
