@@ -16,12 +16,10 @@ namespace CapaNegocio
         {
             try
             {
-                // Llama al DAL para verificar las credenciales
                 return loginDAL.VerificarCredenciales(numeroDocumento, contrasena);
             }
             catch (Exception ex)
             {
-                // Manejar cualquier excepción que pueda ocurrir durante el proceso de verificación
                 Console.WriteLine("Error al verificar credenciales: " + ex.Message);
                 return null;
             }
