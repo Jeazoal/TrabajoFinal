@@ -25,7 +25,6 @@ namespace CapaNegocio
             }
             catch (Exception ex)
             {
-                // Manejar la excepción según tus necesidades
                 Console.WriteLine("Error al obtener provincias: " + ex.Message);
                 return new List<Provincia>();
             }
